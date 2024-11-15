@@ -1,0 +1,58 @@
+# Node.js dependencies
+node_modules
+npm-debug.log*
+yarn-error.log
+yarn.lock
+
+# Build directories
+dist
+build
+
+# Temporary and system files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Environment configuration files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Logs
+logs
+*.log
+debug.log
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# IDEs and editors
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# OS-specific files
+*.stackdump
+*.out
+
+# Test coverage files
+coverage
+.nyc_output
+
+# Yarn-specific files
+.pnp
+.pnp.js
+
+# Cache files for tools like ESLint
+.eslintcache
+
+# Babel cache
+.cache
+
+# TypeScript cache
+*.tsbuildinfo
