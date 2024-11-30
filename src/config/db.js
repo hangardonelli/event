@@ -1,7 +1,8 @@
+require('dotenv').config();
 const { ClickHouse } = require('clickhouse');
 
 const clickhouse = new ClickHouse({
-    url: 'ip',   
+    url: process.env.HOST,   
     port: 8123,               
     debug: false,             
     basicAuth: {              
