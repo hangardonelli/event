@@ -1,3 +1,5 @@
+const { getEventsByDate } = require("../services/eventService");
+
 const mockEvents = [
     {
       startDate: "1942-09-15",
@@ -26,11 +28,16 @@ const mockEvents = [
   ];
   
 
-const getEventsByDate = (req, res) => {
-  const { date } = req.params;
-  const events = mockEvents;
-  const filteredEvents = events.filter((event) => event.date === date);
-  res.json(filteredEvents);
-};
+  const getEventsByDateController = async (req, res) => {
+    const { date } = req.params;
+    try {
+      console.log(date);
+      const events = await getEventsByDate(date);
+      res.json(events); 
+    } catch (error) {
+      console.error('Error in getEventsByDateController:', error.message);
+      res.status(500).json({ error: 'An error occurred while retrieving events.' });
+    }
+  };
 
-module.exports = { getEventsByDate };
+module.exports = { getEventsByDateController };
