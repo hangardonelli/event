@@ -1,8 +1,8 @@
-const express = require('express');
-const { getEventsByDateController } = require('../controllers/eventController');
+import express from 'express';
+import { getEventsByDateController } from '../controllers/eventController.js';
 
 const router = express.Router();
 
 router.get('/events/:date', getEventsByDateController);
 
-module.exports = router;
+export default router;

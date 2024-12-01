@@ -1,8 +1,8 @@
-const clickhouse = require("../config/db");
-const redisClient = require('../config/redis');
-const validator = require("validator");
+import clickhouse from "../config/db.js";
+import redisClient from '../config/redis.js';
+import validator from "validator";
 
-const getEventsByDate = async (date) => {
+export const getEventsByDate = async (date) => {
   try {
     if (!validator.isDate(date)) {
       throw new Error("Fecha no válida");
@@ -28,5 +28,3 @@ const getEventsByDate = async (date) => {
     throw new Error("Error en eventService");
   }
 };
-
-module.exports = { getEventsByDate };
