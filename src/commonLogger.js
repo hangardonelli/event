@@ -1,4 +1,4 @@
-export const logServerStart = async (port) => {
+export const logServerStart = async () => {
     try {
       const chalk = (await import('chalk')).default; 
       console.log(chalk.bgMagenta.white.bold('🎉 Event service is up and running! 🎉'));      
@@ -6,6 +6,3 @@ export const logServerStart = async (port) => {
       console.error('Error importing chalk:', error);
     }
   };
-  
-  
-  
